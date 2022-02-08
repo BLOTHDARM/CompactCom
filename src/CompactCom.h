@@ -17,10 +17,10 @@ typedef void (*GeneralFunction) (ReplyData data);
 
 struct Node
 {
-	GeneralFunction fnc;
+  GeneralFunction fnc;
   int command;
-	Node* next;
-	Node* prev;
+  Node* next;
+  Node* prev;
 };
 
 class CompactCom

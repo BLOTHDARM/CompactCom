@@ -31,29 +31,29 @@ void CompactCom::loop()
 
 void CompactCom::bind(void (*function)(ReplyData),int cmd)
 {
-	Node* n;
-	if (!_head)
-	{
-		_head = new Node;
-		_head->fnc = function;
+  Node* n;
+  if (!_head)
+  {
+    _head = new Node;
+    _head->fnc = function;
     _head->command = cmd;
-		_head->next = _head;
-		_head->prev = _head;
-		return;
-	}
-	else
-	{
-		n = _head;
-		Node* newNode = new Node;
-		newNode->fnc = function;
+    _head->next = _head;
+    _head->prev = _head;
+    return;
+  }
+  else
+  {
+    n = _head;
+    Node* newNode = new Node;
+    newNode->fnc = function;
     newNode->command = cmd;
-		newNode->next = _head;
-		newNode->prev = _head->prev;
-		_head->prev->next = newNode;
-		_head->prev = newNode;
-		_head = newNode;
-		return;
-	}
+    newNode->next = _head;
+    newNode->prev = _head->prev;
+    _head->prev->next = newNode;
+    _head->prev = newNode;
+    _head = newNode;
+    return;
+  }
 }
 
 void CompactCom::send(int cmd, int addr,String data){
@@ -68,7 +68,7 @@ ReplyData CompactCom::getData(){
   if(this->_serial->available()){
     int addr = this->_serial->read();
     if(this->_addr == addr){
-      delay(5);
+      delay(10);
       int cmd = this->_serial->read();
       int from_addr = this->_serial->read();
       data.cmd = cmd;

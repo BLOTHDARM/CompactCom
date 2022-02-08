@@ -1,9 +1,10 @@
 #include <CompactCom.h>
 #include <Arduino.h>
+#include <SoftwareSerial.h>
 
 #define LED 13
 
-bool led_state=false;
+bool led_state=true;
 
 CompactCom nodeCom(&Serial,'2');
 
@@ -28,3 +29,4 @@ void setup(){
 
 void loop(){
   nodeCom.loop();
+}
