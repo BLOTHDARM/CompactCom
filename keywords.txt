@@ -1,0 +1,17 @@
+#######################################
+# Syntax Coloring Map CompactCom
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+CompactCom	KEYWORD1
+ReplyData	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+bind	KEYWORD2
+send	KEYWORD2
+loop	KEYWORD2
+getData	KEYWORD2
