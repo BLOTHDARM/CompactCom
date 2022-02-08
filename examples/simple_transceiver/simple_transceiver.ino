@@ -30,7 +30,6 @@ void loop(){
     while(Serial.available())
         temp+=(char)Serial.read();
     if(temp=="on\n"){
-      Serial.println("start");
       nodeCom.send(10,'2',"HIGH");
       return;
     }
