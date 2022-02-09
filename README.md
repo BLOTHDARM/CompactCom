@@ -54,7 +54,7 @@ void setup(){
 ```
 </details>
 
-Your will be started only from ```loop()``` method. So place it in each loop
+Your functions will be started only from ```loop()``` method. So place it in each loop
 
 
 <details><summary><b>Show example</b></summary>
